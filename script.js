@@ -11,8 +11,8 @@ function sum() {
     console.log(C)
 }
 
-function ExecuteLoop(){
-    for (var i = 0; i <= 5; i = i + 2 ) { // 0 2 4
+function ExecuteLoop() {
+    for (var i = 0; i <= 5; i = i + 2) { // 0 2 4
         console.log(i)
     }
 }
