@@ -38,37 +38,58 @@
 
 // divide(5, )
 
-var ERROR_NOT_FOUND = "please enter n1 && n2 && operation";
-var ERROR_NUMBER_TYPE = "please enter n1 and n2 as a number and the operation as str";
-var ERROR_INVALID_OPERATION = "Invalid Operation"
-function calculator(n1, operation, n2) {
-    if (typeof n1 === 'undefined' || typeof n2 === 'undefined' || typeof operation === 'undefined') {
-        console.log(ERROR_NOT_FOUND)
+// var ERROR_NOT_FOUND = "please enter n1 && n2 && operation";
+// var ERROR_NUMBER_TYPE = "please enter n1 and n2 as a number and the operation as str";
+// var ERROR_INVALID_OPERATION = "Invalid Operation"
+// function calculator(n1, operation, n2) {
+//     if (typeof n1 === 'undefined' || typeof n2 === 'undefined' || typeof operation === 'undefined') {
+//         console.log(ERROR_NOT_FOUND)
+//         return;
+//     }
+
+//     if (typeof n1 === 'number' || typeof n2 === 'number' || typeof operation === 'string') {
+//         if (operation.length > 1) {
+//             console.log(ERROR_INVALID_OPERATION)
+//             return;
+//         }
+//         var result; //undefind
+//         if (operation === "+") {
+//             result = n1 + n2
+//         } else if (operation === "-") {
+//             result = n1 - n2
+//         } else if (operation === "*") {
+//             result = n1 * n2
+//         } else if () {
+//             result = n1 / n2;
+//         }
+
+//         console.log(result)
+
+//     } else {
+//         console.log(ERROR_NUMBER_TYPE)
+//     }
+// }
+
+// calculator(12, "", 12)
+
+
+
+function power(number, power) {
+    if (number == undefined || number === undefined) {
+        console.log("please enter number & power")
         return;
     }
-
-    if (typeof n1 === 'number' || typeof n2 === 'number' || typeof operation === 'string') {
-        if (operation.length > 1) {
-            console.log(ERROR_INVALID_OPERATION)
-            return;
-        }
-        var result; //undefind
-        if (operation === "+") {
-            result = n1 + n2
-        } else if (operation === "-") {
-            result = n1 - n2
-        } else if (operation === "*") {
-            result = n1 * n2
-        } else if () {
-            result = n1 / n2;
-        }
-
-        console.log(result)
-
-    } else {
-        console.log(ERROR_NUMBER_TYPE)
+    if (power == 0) {
+        result = 1;
+        console.log(result);
+        return;
+       
     }
+    var result = number;
+    for (var i = 1; i < power; i++) {
+        result = result * number;
+    }
+    console.log(result);
 }
 
-calculator(12, "", 12)
-
+power(5, 0)
